@@ -37,7 +37,7 @@ const HeroSection = () => {
           height={480}
           className="-mt-34"
         />
-        <VideoFrame src={"/slideopen.mp4"} />
+        <VideoFrame src={"/slideOpen.mp4"} />
       </div>
     </section>
   );
