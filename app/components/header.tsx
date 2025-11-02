@@ -12,8 +12,8 @@ export const Header = () => {
         <FontAwesomeIcon icon={faApple} className="text-white w-4 h-4" />
       </Button>
       <ul className="flex w-fit items-center">
-        {navLinks.map((link) => (
-          <li key={link.label} className="inline mx-4">
+        {navLinks.map((link, key) => (
+          <li key={key} className="inline mx-4">
             <a
               href={link.label}
               className="hover:bg-white/10 py-1 px-4 text-xs rounded-full transition"

@@ -1,13 +1,22 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 const VideoFrame = ({ src }: { src: string }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.9;
+    }
+  }, []);
   return (
     <video
       src={src}
       autoPlay
       muted
       playsInline
+      ref={videoRef}
       className="-mt-28 backdrop-blur-lg w-[900px] pb-24"
     >
       Your browser does not support the video tag.

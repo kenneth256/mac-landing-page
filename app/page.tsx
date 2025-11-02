@@ -5,22 +5,15 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ModelSwitcher from "./components/models/modelSwitch";
 import HeroSection from "./components/HeroSection";
+import ProductViewer from "./components/ProductViewer";
 
 gsap.registerPlugin(ScrollTrigger); // ✅ Fixed - no underscores!
 
 const page = () => {
   return (
-    <div className="w-full h-screen bg-black">
+    <div className="w-full min-h-screen bg-black">
       <HeroSection />
-      <Canvas
-        shadows
-        camera={{ position: [0, 1.5, 3], fov: 75, near: 0.08, far: 100 }}
-      >
-        <Studio />
-        {/* <Macbook3 position={[0, 0, 0]} scale={0.04} /> */}
-        <ModelSwitcher scale={0.04} isMobile={false} />
-        {/* <OrbitControls enableZoom={false} /> */}
-      </Canvas>
+      <ProductViewer />
     </div>
   );
 };

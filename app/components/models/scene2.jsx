@@ -10,11 +10,11 @@ Title: macbook pro M3 16 inch 2024
 import React, { useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 
-export default function Macbook3(props) {
+export default function Macbook(props) {
   const { nodes, materials } = useGLTF('/scene.gltf');
   const { color } = props;
 
-
+  // TEMPORARY DEBUG CODE - Remove after finding keyboard materials
   useEffect(() => {
     console.log('=== ALL MATERIALS ===');
     Object.entries(materials).forEach(([name, material]) => {
